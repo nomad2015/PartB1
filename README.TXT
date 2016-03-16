@@ -20,3 +20,23 @@ These may also be useful commands:
   module list
   
   module avail
+
+++++
+In the makefile:
+change the second line:
+mpicc -o mpi mpi.cpp       shoule be     mpicc -o mpi mpi.c
+because the mpi file name is wrong
+
+  mpicc -o mpi mpi.cpp
+should be
+\t mpicc -o mpi mpi.cpp
+
+  rm mpi
+should be
+\t rm mpi
+
+In the mip.c:
+if (myid = 0) {            should be         if (myid == 0) {
+
+
+
