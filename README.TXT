@@ -21,7 +21,10 @@ These may also be useful commands:
   
   module avail
 
-++++
+
+
+
++++++++++++++++++++++++++
 In the makefile:
 change the second line:
 mpicc -o mpi mpi.cpp       shoule be     mpicc -o mpi mpi.c
@@ -35,8 +38,21 @@ should be
 should be
 \t rm mpi
 
+
+
+
 In the mip.c:
-if (myid = 0) {            should be         if (myid == 0) {
+if (myid = 0) \{            should be         if (myid == 0) \{}
+
+
+
+
+
+
+mpi.pbs:
+mpirun -np 8 -machinefile $PBS_NODEFILE ./mpi.exe
+should be
+mpirun -np 8 ./mpi
 
 
 

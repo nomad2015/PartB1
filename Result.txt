@@ -14,5 +14,17 @@ should be
 \t rm mpi
 
 
+
+
 In the mip.c:
 if (myid = 0) \{            should be         if (myid == 0) \{}
+
+
+
+
+
+
+mpi.pbs:
+mpirun -np 8 -machinefile $PBS_NODEFILE ./mpi.exe
+should be
+mpirun -np 8 ./mpi
