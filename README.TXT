@@ -44,7 +44,11 @@ should be
 In the mip.c:
 if (myid = 0) \{            should be         if (myid == 0) \{}
 
+mysum += 4.0/(1.0 + x*x*x);
 
+should be
+
+mysum += 4.0/(1.0 + x*x);
 
 
 
